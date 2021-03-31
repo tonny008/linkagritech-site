@@ -1,7 +1,7 @@
 ######################## default configuration ####################
 baseURL = "https://examplesite.com"
-title = "Linkagritech"
-theme = "omega-hugo"
+title = "OMEGA"
+theme = "omega"
 # google analytics
 googleAnalytics = "" # example : UA-123-45
 [markup.goldmark.renderer]

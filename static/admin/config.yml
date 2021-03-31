@@ -4,6 +4,7 @@ backend:
   branch: main
 media_folder: static/img
 public_folder: /img
+publish_mode: editorial_workflow
 collections:
   - name: 'blog'
     label: 'Blog'
@@ -21,9 +22,26 @@ collections:
   - label: 'Pages'
     name: 'pages'
     files:
+      - label: 'Home Page'
+        name: 'home'
+        file: 'data/home.yml'
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Intro, name: intro, widget: markdown }
+          - label: Slides
+            name: slides
+            widget: list
+            fields:
+              - { label: Image, name: image, widget: image }
+          - label: Agrochemical
+            name: agrochemical
+            widget: list
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Intro, name: intro, widget: markdown }
       - label: 'About Page'
         name: 'about'
-        file: 'content/about.yml'
+        file: 'data/about.yml'
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Intro, name: intro, widget: markdown }
@@ -34,15 +52,3 @@ collections:
               - { label: Name, name: name, widget: string }
               - { label: Position, name: position, widget: string }
               - { label: Photo, name: photo, widget: image }
-      - label: 'Locations Page'
-        name: 'locations'
-        file: 'content/locations.yml'
-        fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Intro, name: intro, widget: markdown }
-          - label: Locations
-            name: locations
-            widget: list
-            fields:
-              - { label: Name, name: name, widget: string }
-              - { label: Address, name: address, widget: string }
