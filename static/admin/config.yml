@@ -47,7 +47,7 @@ collections:
           - { name: 'vision', label: vision, widget: 'object', fields: [
             {label: "enable", name: "enable", widget: boolean},
             {label: "section", name: "section", widget: string},
-            {label: "vision_item", name: "vision_item", widget: list, fields:[
+            {label: "vision_item", name: "vision_item", widget: 'list', fields: [
               {label: "title", name: "title", widget: string},
               {label: "image", name: "image", widget: image},
               {label: "content", name: "content", widget: string}
@@ -58,7 +58,7 @@ collections:
             {label: "section", name: "section", widget: string},
             {label: "title", name: "title", widget: string},
             {label: "content", name: "content", widget: string},
-            {label: "product_item", name: "product_item", widget: list, fields:[
+            {label: "product_item", name: "product_item", widget: list, fields: [
               {label: "title", name: "title", widget: string},
               {label: "image", name: "image", widget: image},
               {label: "content", name: "content", widget: string},
