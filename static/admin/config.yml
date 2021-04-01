@@ -24,31 +24,57 @@ collections:
     files:
       - label: 'Home Page'
         name: 'home'
-        file: 'data/home.yml'
+        file: 'data/homepage.yml'
         fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Intro, name: intro, widget: markdown }
-          - label: Slides
-            name: slides
-            widget: list
-            fields:
-              - { label: Image, name: image, widget: image }
-          - label: Agrochemical
-            name: agrochemical
-            widget: list
-            fields:
-              - { label: Title, name: title, widget: string }
-              - { label: Intro, name: intro, widget: markdown }
-      - label: 'About Page'
-        name: 'about'
-        file: 'data/about.yml'
-        fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Intro, name: intro, widget: markdown }
-          - label: Team
-            name: team
-            widget: list
-            fields:
-              - { label: Name, name: name, widget: string }
-              - { label: Position, name: position, widget: string }
-              - { label: Photo, name: photo, widget: image }
+          - { name: 'banner', label: Banner, widget: 'object', fields: [
+            {label: "enable", name: "enable", widget: boolean},
+            {label: "title", name: "title", widget: string},
+            {label: "content", name: "content", widget: string},
+            {label: "image", name: "image", widget: image},
+            {label: "button", name: "button", widget: object, fields: [
+              {label: "enable", name: "enable", widget: boolean},
+              {label: "label", name: "label", widget: string},
+              {label: "link", name: "link", widget: string}
+            ]}
+          ]}
+          - { name: 'mission', label: mission, widget: 'object', fields: [
+            {label: "enable", name: "enable", widget: boolean},
+            {label: "title", name: "title", widget: string},
+            {label: "content", name: "content", widget: string},
+            {label: "video_thumb", name: "video_thumb", widget: image},
+            {label: "video_id", name: "video_id", widget: string}
+          ]}
+          - { name: 'vision', label: vision, widget: 'object', fields: [
+            {label: "enable", name: "enable", widget: boolean},
+            {label: "section", name: "section", widget: string},
+            {label: "vision_item", name: "vision_item", widget: list, fields:[
+              {label: "title", name: "title", widget: string},
+              {label: "image", name: "image", widget: image},
+              {label: "content", name: "content", widget: string}
+            ]}
+          ]}
+          - { name: 'product', label: product, widget: 'object', fields: [
+            {label: "enable", name: "enable", widget: boolean},
+            {label: "section", name: "section", widget: string},
+            {label: "title", name: "title", widget: string},
+            {label: "content", name: "content", widget: string},
+            {label: "product_item", name: "product_item", widget: list, fields:[
+              {label: "title", name: "title", widget: string},
+              {label: "image", name: "image", widget: image},
+              {label: "content", name: "content", widget: string},
+              {label: "project_url", name: "project_url", widget: string}
+            ]}
+          ]}
+          - { name: 'contact', label: contact, widget: 'object', fields: [
+            {label: "enable", name: "enable", widget: boolean},
+            {label: "section", name: "section", widget: string},
+            {label: "title", name: "title", widget: string},
+            {label: "image", name: "image", widget: image},
+            {label: "content", name: "content", widget: string},
+          ]}
+          - { name: 'call_to_action', label: call_to_action, widget: 'object', fields: [
+            {label: "enable", name: "enable", widget: boolean},
+            {label: "title", name: "title", widget: string},
+            {label: "button_label", name: "button_label", widget: string},
+            {label: "button_link", name: "button_link", widget: string},
+          ]}
