@@ -3,7 +3,7 @@ backend:
   repo: tonny008/linkagritech-site 
   branch: main
 media_folder: static/images
-public_folder: static/images
+public_folder: images
 publish_mode: editorial_workflow
 collections:
   - name: 'blog'
