@@ -2,8 +2,8 @@ backend:
   name: github
   repo: tonny008/linkagritech-site 
   branch: main
-media_folder: static/img
-public_folder: /img
+media_folder: static/images
+public_folder: static/images
 publish_mode: editorial_workflow
 collections:
   - name: 'blog'
